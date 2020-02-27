@@ -11,20 +11,26 @@ import Home from './Home'
 import Sobre from './Sobre'
 import Contato from './Contato'
 import Campanhas from './Campanhas'
+import Admin from './Admin'
+import Login from './Login'
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Header />
-        <Route path='/' exact component={Home} />
-        <Route path='/sobre' component={Sobre} />
-        <Route path='/campanhas' component={Campanhas} />
-        <Route path='/contato' component={Contato} />
-        <Footer />
-      </div>
-    </Router>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <Header />
+          <Route path='/' exact component={Home} />
+          <Route path='/sobre' component={Sobre} />
+          <Route path='/campanhas' component={Campanhas} />
+          <Route path='/contato' component={Contato} />
+          <Route path='/admin' component={Admin} />
+          <Route path='/login' component={Login} />
+          <Footer />
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App
